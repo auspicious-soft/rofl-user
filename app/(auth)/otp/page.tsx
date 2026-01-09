@@ -2,11 +2,12 @@
 
 import { ArrowRight } from "lucide-react";
 import AuthLayout from "@/app/components/AuthLayout";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-
+  const router = useRouter()
   return (
-    <AuthLayout logoClassName="mt-40">
+    <AuthLayout logoClassName="">
       <form className="space-y-5 border-none p-5 rounded-3xl bg-linear-to-b from-[#39207A] from-0% via-[#000000] via-15% to-[#000000] to-100%">
         {/* Heading */}
         <div className="text-center">
@@ -41,7 +42,7 @@ export default function Home() {
 
         {/* Divider */}
         <div className="text-center text-sm font-medium">
-          Remember Password?<span className="underline ml-1">Login</span>
+          Remember Password?<button className="underline ml-1" onClick={()=>router.push("/")}>Login</button>
         </div>
 
 
