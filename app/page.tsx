@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Lock, MailOpen, MoveRight } from "lucide-react";
+import { ArrowRight, Lock, MailOpen } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import AuthLayout from "./components/AuthLayout";
