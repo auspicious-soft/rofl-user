@@ -18,182 +18,163 @@ const ProfileDetails = () => {
   };
 
   return (
-    <div className="w-full self-stretch p-10 rounded-4xl inline-flex flex-col items-center gap-7">
-      <div className="self-stretch px-32 inline-flex flex-col justify-start items-center gap-7">
-        <div className="self-stretch flex flex-col justify-center items-center gap-7">
-          {/* Header Section */}
-          <div className="self-stretch flex flex-col justify-start items-start gap-2.5">
-            <div className="self-stretch text-center justify-center text-[#F2482D] text-5xl font-extrabold bricolage capitalize leading-18.25">
-              Profile Details
+    <div className="w-full p-4 sm:p-6 lg:p-10 rounded-4xl">
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-10">
+
+        {/* Header */}
+        <div className="text-center flex flex-col gap-3">
+          <h1 className="text-[#F2482D] text-3xl sm:text-4xl lg:text-5xl font-extrabold bricolage">
+            Profile Details
+          </h1>
+          <p className="text-white text-sm sm:text-base lg:text-lg font-medium">
+            If you need help with entries, payments, prizes, or account-related questions, reach out to us anytime.
+          </p>
+        </div>
+
+        {/* Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-10"
+        >
+          {/* Basic Details */}
+          <div className="w-full p-4 sm:p-6 rounded-2xl border border-[#E6E6E6] flex flex-col gap-6">
+            <h2 className="text-white text-lg sm:text-xl font-bold">
+              Basic Details
+            </h2>
+
+            {/* First + Last */}
+            <div className="flex flex-col lg:flex-row gap-5">
+              <Input
+                label="First Name"
+                value={firstName}
+                onChange={setFirstName}
+                placeholder="Enter your first name"
+              />
+              <Input
+                label="Last Name"
+                value={lastName}
+                onChange={setLastName}
+                placeholder="Enter your last name"
+              />
             </div>
-            <div className="self-stretch text-center justify-start text-white text-lg font-medium leading-9">
-              If you need help with entries, payments, prizes, or account-related questions, reach out to us anytime.
+
+            {/* Email */}
+            <Input
+              label="Email Address"
+              value={email}
+              onChange={setEmail}
+              placeholder="Enter your email address"
+              type="email"
+            />
+          </div>
+
+          {/* Shipping Address */}
+          <div className="w-full p-4 sm:p-6 rounded-2xl border border-[#E6E6E6] flex flex-col gap-6">
+            <h2 className="text-white text-lg sm:text-xl font-bold">
+              Shipping Address
+            </h2>
+
+            {/* Country + State */}
+            <div className="flex flex-col lg:flex-row gap-5">
+              <Select
+                label="Country"
+                value={country}
+                onChange={setCountry}
+                options={["United States", "United Kingdom", "Canada", "Australia"]}
+              />
+              <Select
+                label="State"
+                value={state}
+                onChange={setState}
+                options={["California", "New York", "Texas", "Florida"]}
+              />
+            </div>
+
+            <Input
+              label="Street Address"
+              value={streetAddress}
+              onChange={setStreetAddress}
+              placeholder="Enter your street address"
+            />
+
+            <div className="flex flex-col lg:flex-row gap-5">
+              <Input
+                label="City"
+                value={city}
+                onChange={setCity}
+                placeholder="Enter your city"
+              />
+              <Input
+                label="Postal Code"
+                value={postalCode}
+                onChange={setPostalCode}
+                placeholder="Enter postal code"
+              />
             </div>
           </div>
 
-          {/* Form Section */}
-          <form onSubmit={handleSubmit} className="self-stretch flex flex-col justify-start items-start gap-10">
-            {/* Basic Details Section */}
-            <div className="self-stretch p-4 rounded-2xl border border-[#E6E6E6] flex flex-col justify-start items-start gap-5">
-              <div className="self-stretch justify-start text-white text-xl font-bold leading-9">
-                Basic Details
-              </div>
-
-              {/* First Name & Last Name */}
-              <div className="self-stretch px-10 inline-flex justify-start items-start gap-5">
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    placeholder="Enter your first name"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    placeholder="Enter your last name"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-              </div>
-
-              {/* Email Address */}
-              <div className="self-stretch px-10 inline-flex justify-start items-start gap-5">
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Shipping Address Section */}
-            <div className="self-stretch p-4 rounded-2xl border border-[#E6E6E6] flex flex-col justify-start items-start gap-5">
-              <div className="self-stretch flex flex-col justify-start items-start gap-2.5">
-                <div className="self-stretch justify-start text-white text-xl font-bold leading-9">
-                  Shipping Address
-                </div>
-              </div>
-
-              {/* Country & State */}
-              <div className="self-stretch px-10 inline-flex justify-start items-start gap-5">
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    Country
-                  </label>
-                  <div className="relative w-full">
-                    <select
-                      value={country}
-                      onChange={(e) => setCountry(e.target.value)}
-                      className="self-stretch w-full px-7 py-4 bg-[#272727]  text-white outline-none focus:border-[#F2482D] appearance-none cursor-pointer"
-                    >
-                      <option value="">Select Country</option>
-                      <option value="us">United States</option>
-                      <option value="uk">United Kingdom</option>
-                      <option value="ca">Canada</option>
-                      <option value="au">Australia</option>
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none" />
-                  </div>
-                </div>
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    State
-                  </label>
-                  <div className="relative w-full">
-                    <select
-                      value={state}
-                      onChange={(e) => setState(e.target.value)}
-                      className="self-stretch w-full px-7 py-4 bg-[#272727]  text-white outline-none focus:border-[#F2482D] appearance-none cursor-pointer"
-                    >
-                      <option value="">Select State</option>
-                      <option value="ca">California</option>
-                      <option value="ny">New York</option>
-                      <option value="tx">Texas</option>
-                      <option value="fl">Florida</option>
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Street Address */}
-              <div className="self-stretch px-10 inline-flex justify-start items-start gap-5">
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    Street Address
-                  </label>
-                  <input
-                    type="text"
-                    value={streetAddress}
-                    onChange={(e) => setStreetAddress(e.target.value)}
-                    placeholder="Enter your street address"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-              </div>
-
-              {/* City & Postal Code */}
-              <div className="self-stretch px-10 inline-flex justify-start items-start gap-5">
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    City
-                  </label>
-                  <input
-                    type="text"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    placeholder="Enter your city"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-                <div className="flex-1 inline-flex flex-col justify-start items-start gap-2.5">
-                  <label className="self-stretch justify-start text-white text-lg font-medium leading-9">
-                    Postal Code
-                  </label>
-                  <input
-                    type="text"
-                    value={postalCode}
-                    onChange={(e) => setPostalCode(e.target.value)}
-                    placeholder="Enter postal code"
-                    className="self-stretch w-full h-14 px-7 py-4 bg-[#272727]  text-white placeholder:text-gray-500 outline-none focus:border-[#F2482D]"
-                  />
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        {/* Submit Button */}
-        <button
-          onClick={handleSubmit}
-          className="w-72 h-14 bg-[#F2482D] rounded-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border border-black flex items-center justify-center gap-2.5 hover:opacity-90 transition-opacity"
-        >
-          <span className="text-white text-base font-medium leading-5">
-            Update Profile
-          </span>
-          <ArrowDown className="w-4 h-4 rotate-270 text-white" />
-        </button>
+          {/* Submit */}
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-full sm:w-72 h-12 sm:h-14 bg-[#F2482D] rounded-[10px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border border-black flex items-center justify-center gap-2.5"
+            >
+              <span className="text-white text-sm sm:text-base font-medium">
+                Update Profile
+              </span>
+              <ArrowDown className="w-4 h-4 rotate-270 text-white" />
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
 };
 
 export default ProfileDetails;
+
+/* ---------- Reusable Components ---------- */
+
+const Input = ({
+  label,
+  value,
+  onChange,
+  placeholder,
+  type = "text",
+}: any) => (
+  <div className="flex-1 flex flex-col gap-2.5">
+    <label className="text-white text-sm sm:text-base font-medium">
+      {label}
+    </label>
+    <input
+      type={type}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      className="w-full h-12 sm:h-14 px-5 sm:px-7 bg-[#272727] text-white placeholder:text-gray-500 outline-none"
+    />
+  </div>
+);
+
+const Select = ({ label, value, onChange, options }: any) => (
+  <div className="flex-1 flex flex-col gap-2.5">
+    <label className="text-white text-sm sm:text-base font-medium">
+      {label}
+    </label>
+    <div className="relative">
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="w-full h-12 sm:h-14 px-5 sm:px-7 bg-[#272727] text-white appearance-none cursor-pointer"
+      >
+        <option value="">Select {label}</option>
+        {options.map((opt: string) => (
+          <option key={opt} value={opt}>
+            {opt}
+          </option>
+        ))}
+      </select>
+      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white pointer-events-none" />
+    </div>
+  </div>
+);

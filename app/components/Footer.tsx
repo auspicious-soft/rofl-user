@@ -99,13 +99,13 @@ const Footer: React.FC = () => {
                 Contact Us
               </Link>
               <Link
-                href="/user/terms"
+                href="/user/terms&condition"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Terms & Conditions
               </Link>
               <Link
-                href="/user/privacy"
+                href="/user/privacy&policy"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Privacy Policy

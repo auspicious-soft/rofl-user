@@ -7,31 +7,94 @@ import { Lock } from "../utils/icons";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+   const closeAll = () => {
+    setOpen(false);
+    setMobileOpen(false);
+  };
   return (
-    <div className="self-stretch px-10 bg-white rounded-[10px] flex justify-between items-center m-8">
-      <div className="w-96 flex justify-start items-center gap-7">
-        <Link href="/user/marketplace" className="text-black text-base font-medium ">
-          Marketplace
-        </Link>
-        <Link href="/user/winners" className="text-black text-base font-medium ">
-          Winners
-        </Link>
-        <Link href="/user/faqs" className="text-black text-base font-medium ">
-          FAQ’s
-        </Link>
-        <Link href="/user/list-item" className="text-black text-base font-medium ">
-          List Your Item
-        </Link>
+    <div className="self-stretch px-4 sm:px-6 md:px-10 py-3 bg-white rounded-[10px] flex items-center m-4 md:m-8 relative">
+      {/* Left: mobile menu button + desktop links */}
+      <div className="flex items-center gap-4">
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileOpen((s) => !s)}
+          className="md:hidden p-2 rounded-md bg-transparent"
+          aria-label="Toggle menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 6H21"
+              stroke="#111827"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M3 12H21"
+              stroke="#111827"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M3 18H21"
+              stroke="#111827"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-7">
+          <Link
+            href="/user/marketplace"
+            className="text-black text-base font-medium "
+          >
+            Marketplace
+          </Link>
+          <Link
+            href="/user/winners"
+            className="text-black text-base font-medium "
+          >
+            Winners
+          </Link>
+          <Link href="/user/faqs" className="text-black text-base font-medium ">
+            FAQ’s
+          </Link>
+          <Link
+            href="/user/list-item"
+            className="text-black text-base font-medium "
+          >
+            List Your Item
+          </Link>
+        </div>
       </div>
 
-      <Image
-        className="w-32 h-16 object-contain"
-        src="/images/leftLogo.png"
-        alt="Logo 2"
-        width={126}
-        height={70}
-      />
-      <div className="relative w-72 flex justify-end items-center gap-7">
+      {/* Center spacer to allow logo positioning */}
+      <div className="flex-1" />
+
+      {/* Logo (center on md+, right on mobile) */}
+      <div className="ml-auto md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+        <Image
+          className="w-32 h-16 object-contain"
+          src="/images/leftLogo.png"
+          alt="Logo 2"
+          width={126}
+          height={70}
+        />
+      </div>
+
+      {/* Right: login dropdown (hidden on mobile) */}
+      <div className="relative w-72 flex justify-end items-center gap-7 hidden md:flex">
         {/* Trigger */}
         <button
           onClick={() => setOpen((prev) => !prev)}
@@ -73,6 +136,44 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Mobile menu panel */}
+      {mobileOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40">
+          <div className="flex flex-col text-black px-4 py-4 gap-2">
+            <Link href="/user/marketplace" onClick={closeAll} className="py-2 text-sm font-medium">
+              Marketplace
+            </Link>
+            <Link href="/user/winners" onClick={closeAll} className="py-2 text-sm font-medium">
+              Winners
+            </Link>
+            <Link href="/user/faqs" onClick={closeAll} className="py-2 text-sm font-medium">
+              FAQ’s
+            </Link>
+            <Link href="/user/list-item" onClick={closeAll} className="py-2 text-sm font-medium">
+              List Your Item
+            </Link>
+            <button
+              onClick={() => {
+                setOpen(true);
+                setMobileOpen(false);
+              }}
+              className="py-2 text-sm text-left font-medium"
+            >
+              Login / Account
+            </button>
+            <hr className="my-2" />
+            <Link href={"/user/transaction&purchase"} onClick={closeAll} className="py-2 text-sm text-left">
+              Transactions / Purchase
+            </Link>
+            <Link href={"/user/profile/change-password"} onClick={closeAll} className="py-2 text-sm text-left">Change Password</Link>
+            <Link href={"/user/profile"} onClick={closeAll} className="py-2 text-sm text-left">My Profile</Link>
+            <button className="py-2 text-sm text-left text-red-600">
+              Logout
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
