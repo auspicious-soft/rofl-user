@@ -12,89 +12,107 @@ const Footer: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        padding:"25px",
+        padding: "25px",
       }}
     >
-      <div className="w-full mx-auto px-36 md:px-10 py-8 flex flex-col justify-start items-center gap-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-24 w-full">
+      <div className="w-full mx-auto px-4 sm:px-6 md:px-10 lg:px-10 py-8 flex flex-col justify-start items-center gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-24 w-full">
+          {/* Brand + Newsletter */}
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              <Image
+                className="w-36 h-20"
+                src="/images/leftLogo.png"
+                alt="Logo 1"
+                width={144}
+                height={80}
+                unoptimized
+              />
 
-  {/* Brand + Newsletter */}
-  <div className="flex flex-col gap-4">
-    <div className="flex flex-col gap-2">
-      <Image
-        className="w-36 h-20"
-        src="/images/leftLogo.png"
-        alt="Logo 1"
-        width={144}
-        height={80}
-        unoptimized
-      />
+              <p className="text-white text-base leading-7">
+                Win amazing prizes with fair draws, secure payments, and trusted
+                raffles—all in one place.
+              </p>
+            </div>
 
-      <p className="text-white text-base leading-7">
-        Win amazing prizes with fair draws, secure payments, and trusted
-        raffles—all in one place.
-      </p>
-    </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-white text-base leading-7">
+                Subscribe to our newsletter
+              </span>
 
-    <div className="flex flex-col gap-2">
-      <span className="text-white text-base leading-7">
-        Subscribe to our newsletter
-      </span>
+              <div className="pl-5 pr-1 py-1 bg-black rounded-2xl outline outline-[#546A7C] flex items-center gap-2">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
+                />
+                <button className="px-4 py-2 bg-[#272727] rounded-[10px] text-white text-base hover:bg-gray-800 transition-colors">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
 
-      <div className="pl-5 pr-1 py-1 bg-black rounded-2xl outline outline-1 outline-[#546A7C] flex items-center gap-2">
-        <input
-          type="email"
-          placeholder="Email"
-          className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
-        />
-        <button className="px-4 py-2 bg-[#272727] rounded-[10px] text-white text-base hover:bg-gray-800 transition-colors">
-          Submit
-        </button>
-      </div>
-    </div>
-  </div>
+          {/* Quick Links */}
+          <div className="flex flex-col gap-8">
+            <h4 className="text-white text-xl font-bold leading-7">
+              Quick Links
+            </h4>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/user/dashboard"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Home
+              </Link>
+              <Link
+                href="/user/marketplace"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Marketplace
+              </Link>
+              <Link
+                href="/user/winners"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Winners
+              </Link>
+            </div>
+          </div>
 
-  {/* Quick Links */}
-  <div className="flex flex-col gap-8">
-    <h4 className="text-white text-xl font-bold leading-7">
-      Quick Links
-    </h4>
-    <div className="flex flex-col gap-2">
-      <Link href="/" className="text-white text-base leading-7 hover:underline">
-        Home
-      </Link>
-      <Link href="/marketplace" className="text-white text-base leading-7 hover:underline">
-        Marketplace
-      </Link>
-      <Link href="/winners" className="text-white text-base leading-7 hover:underline">
-        Winners
-      </Link>
-    </div>
-  </div>
-
-  {/* Customer Service */}
-  <div className="flex flex-col gap-8">
-    <h4 className="text-white text-xl font-bold leading-7">
-      Customer Service
-    </h4>
-    <div className="flex flex-col gap-2">
-      <Link href="/faq" className="text-white text-base leading-7 hover:underline">
-        FAQ
-      </Link>
-      <Link href="/contact" className="text-white text-base leading-7 hover:underline">
-        Contact Us
-      </Link>
-      <Link href="/terms" className="text-white text-base leading-7 hover:underline">
-        Terms & Conditions
-      </Link>
-      <Link href="/privacy" className="text-white text-base leading-7 hover:underline">
-        Privacy Policy
-      </Link>
-    </div>
-  </div>
-
-</div>
-
+          {/* Customer Service */}
+          <div className="flex flex-col gap-8">
+            <h4 className="text-white text-xl font-bold leading-7">
+              Customer Service
+            </h4>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/user/faqs"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/user/contact-us"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Contact Us
+              </Link>
+              <Link
+                href="/user/terms"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Terms & Conditions
+              </Link>
+              <Link
+                href="/user/privacy"
+                className="text-white text-base leading-7 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
+        </div>
 
         <div className="self-stretch flex flex-col justify-start items-center gap-4 w-full">
           <div className="self-stretch h-px bg-[#546A7C]" />
