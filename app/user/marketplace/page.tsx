@@ -54,7 +54,7 @@ const MarketPlace = () => {
   const [standardListing, setStandardListing] = useState(false);
   return (
     <>
-      <BreadCrumb title="Marketplace" />
+      <BreadCrumb title="Marketplace" badgeText="Experience Pure Excitement" />
       <section className="w-full p-10 rounded-4xl flex flex-col gap-7">
         {/* HEADER */}
         <div className="flex justify-between items-center">

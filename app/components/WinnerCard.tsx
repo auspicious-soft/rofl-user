@@ -20,7 +20,7 @@ export default function WinnerCard({
   date,
 }: WinnerCardProps) {
   return (
-    <div className="w-full max-w-180 bg-black rounded-2xl p-4 flex gap-4">
+    <div className="w-full max-w-180 bg-black rounded-2xl flex gap-4">
       {/* LEFT IMAGE */}
       {image && (
         <div className="relative w-65 h-45 rounded-xl overflow-hidden shrink-0">

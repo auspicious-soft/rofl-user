@@ -79,7 +79,7 @@ const MarketPlaceDetail = () => {
 
   return (
     <>
-      <BreadCrumb title="Marketplace" />
+      <BreadCrumb title="Marketplace" badgeText="Experience Pure Excitement" />
       <section className="w-full px-4 sm:px-6 lg:px-10 py-10">
         <div className=" mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8">
           {/* LEFT SIDEBAR */}

@@ -42,6 +42,51 @@ const winners: Winner[] = [
     location: "Austin, TX",
     date: "Jan 18, 2025",
   },
+  {
+    id: 3,
+    image: "/images/Rectangle 14.svg",
+    avatar: "/images/ps.png",
+    name: "Alex M.",
+    prize: "Macbook Air",
+    location: "Austin, TX",
+    date: "Jan 18, 2025",
+  },
+  {
+    id: 3,
+    image: "/images/Rectangle 14.svg",
+    avatar: "/images/ps.png",
+    name: "Alex M.",
+    prize: "Macbook Air",
+    location: "Austin, TX",
+    date: "Jan 18, 2025",
+  },
+  {
+    id: 3,
+    image: "/images/Rectangle 14.svg",
+    avatar: "/images/ps.png",
+    name: "Alex M.",
+    prize: "Macbook Air",
+    location: "Austin, TX",
+    date: "Jan 18, 2025",
+  },
+  {
+    id: 3,
+    image: "/images/Rectangle 14.svg",
+    avatar: "/images/ps.png",
+    name: "Alex M.",
+    prize: "Macbook Air",
+    location: "Austin, TX",
+    date: "Jan 18, 2025",
+  },
+  {
+    id: 3,
+    image: "/images/Rectangle 14.svg",
+    avatar: "/images/ps.png",
+    name: "Alex M.",
+    prize: "Macbook Air",
+    location: "Austin, TX",
+    date: "Jan 18, 2025",
+  },
   // add more
 ];
 
@@ -57,7 +102,7 @@ const Page = () => {
 
   return (
     <>
-      <BreadCrumb title="Recent Winners" />
+      <BreadCrumb title="Recent Winners" badgeText="Experience Pure Excitement" />
 
       <section className="w-full px-4 sm:px-6 lg:px-10 py-10">
         {/* HEADER ROW */}
@@ -80,7 +125,7 @@ const Page = () => {
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-0 lg:mb-6">
           {filteredWinners.map((winner) => (
             <WinnerCard
               key={winner.id}
