@@ -43,7 +43,7 @@ const winners: Winner[] = [
     date: "Jan 18, 2025",
   },
   {
-    id: 3,
+    id: 4,
     image: "/images/Rectangle 14.svg",
     avatar: "/images/ps.png",
     name: "Alex M.",
@@ -52,7 +52,7 @@ const winners: Winner[] = [
     date: "Jan 18, 2025",
   },
   {
-    id: 3,
+    id: 5,
     image: "/images/Rectangle 14.svg",
     avatar: "/images/ps.png",
     name: "Alex M.",
@@ -61,7 +61,7 @@ const winners: Winner[] = [
     date: "Jan 18, 2025",
   },
   {
-    id: 3,
+    id: 6,
     image: "/images/Rectangle 14.svg",
     avatar: "/images/ps.png",
     name: "Alex M.",
@@ -70,7 +70,7 @@ const winners: Winner[] = [
     date: "Jan 18, 2025",
   },
   {
-    id: 3,
+    id: 7,
     image: "/images/Rectangle 14.svg",
     avatar: "/images/ps.png",
     name: "Alex M.",
@@ -79,7 +79,7 @@ const winners: Winner[] = [
     date: "Jan 18, 2025",
   },
   {
-    id: 3,
+    id: 8,
     image: "/images/Rectangle 14.svg",
     avatar: "/images/ps.png",
     name: "Alex M.",

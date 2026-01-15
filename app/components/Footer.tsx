@@ -60,19 +60,19 @@ const Footer: React.FC = () => {
             </h4>
             <div className="flex flex-col gap-2">
               <Link
-                href="/"
+                href="/user/dashboard"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Home
               </Link>
               <Link
-                href="/marketplace"
+                href="/user/marketplace"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Marketplace
               </Link>
               <Link
-                href="/winners"
+                href="/user/winners"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Winners
@@ -87,25 +87,25 @@ const Footer: React.FC = () => {
             </h4>
             <div className="flex flex-col gap-2">
               <Link
-                href="/faq"
+                href="/user/faqs"
                 className="text-white text-base leading-7 hover:underline"
               >
                 FAQ
               </Link>
               <Link
-                href="/contact"
+                href="/user/contact-us"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Contact Us
               </Link>
               <Link
-                href="/terms"
+                href="/user/terms"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Terms & Conditions
               </Link>
               <Link
-                href="/privacy"
+                href="/user/privacy"
                 className="text-white text-base leading-7 hover:underline"
               >
                 Privacy Policy
