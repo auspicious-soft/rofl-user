@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 interface ProductCardProps {
@@ -54,7 +54,7 @@ function ProductCard({ product }: ProductCardProps) {
             <span className="text-white text-base font-medium">
               Enter
             </span>
-            <ChevronRight className="w-4 h-4 text-white" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </button>
         </div>
       </div>
