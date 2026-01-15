@@ -184,7 +184,7 @@ const TermsAndConditions = () => {
           </div>
           <div className="self-stretch justify-start text-[#E6E6E6] text-sm font-normal leading-6">
             Your privacy is important to us. Please review our Privacy Policy to
-            understand how we collect and use your personal information.
+            understand how we collect and use your personal information. 
           </div>
         </div>
       </div>
