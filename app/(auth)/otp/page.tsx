@@ -41,7 +41,7 @@ export default function Home() {
         </button>
 
         {/* Divider */}
-        <div className="text-center text-sm font-medium">
+        <div className="text-center text-white  text-sm font-medium">
           Remember Password?<button className="underline ml-1" onClick={()=>router.push("/")}>Login</button>
         </div>
 
