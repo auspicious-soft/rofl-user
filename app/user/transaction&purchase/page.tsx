@@ -1,5 +1,5 @@
 "use client";
-import SectionHeader from "@/app/components/SectionHeader";
+import BreadCrumb from "@/app/components/BreadCrumb";
 import TransactionsTable from "@/app/components/TransactionsTable";
 import React from "react";
 
@@ -7,7 +7,7 @@ import React from "react";
 const TransactionsPurchases = () => {
   return (
     <>
-      <SectionHeader title="Transactions & Purchases" />
+      <BreadCrumb title="Transactions & Purchases" />
       <TransactionsTable />
     </>
   );

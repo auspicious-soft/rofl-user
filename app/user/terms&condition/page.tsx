@@ -1,12 +1,12 @@
 "use client";
-import SectionHeader from "@/app/components/SectionHeader";
+import BreadCrumb from "@/app/components/BreadCrumb";
 import TermsAndConditions from "@/app/components/TermsCondition";
 import React from "react";
 
 const TermsAndConditionsPage = () => {
   return (
     <>
-      <SectionHeader title="Terms & Conditions" />
+      <BreadCrumb title="Terms & Conditions" />
       <TermsAndConditions />
     </>
   );

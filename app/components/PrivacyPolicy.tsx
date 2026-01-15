@@ -5,7 +5,7 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="self-stretch px-32 py-10 rounded-4xl inline-flex flex-col justify-start items-center gap-7">
+    <div className="self-stretch px-5 lg:px-32 py-10 rounded-4xl inline-flex flex-col justify-start items-center gap-7">
       <div className="self-stretch flex flex-col justify-start items-center gap-7">
         <div className="self-stretch flex flex-col justify-center items-center gap-7">
           <div className="self-stretch flex flex-col justify-start items-start gap-2.5">
