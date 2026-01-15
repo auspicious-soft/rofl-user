@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cabinetGrotesk.className} ${cabinetGrotesk.variable} ${bricolage.variable} antialiased bg-black`}
+        className={`${cabinetGrotesk.className} ${cabinetGrotesk.variable} ${bricolage.variable} antialiased bg-[#272727]`}
       >
         {children}
       </body>

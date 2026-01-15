@@ -21,7 +21,7 @@ export default function AuthLayout({
           priority
         />
       </div>
-      <div className="w-full md:w-1/2 flex flex-col relative items-center justify-center h-screen">
+      <div className="w-full md:w-1/2 flex flex-col bg-[#272727] relative items-center justify-center h-screen">
         <p className="absolute top-1 md:top-10 right-5 text-[#ffffff] text-sm font-normal">
           Have Issues? <span className="underline">Contact Support</span>
         </p>
