@@ -3,15 +3,15 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const cabinetGrotesk = localFont({
-  src: '../app/assets/fonts/CabinetGrotesk-Regular.otf',
-  variable:"--font-cabinetGrotesk",
+  src: "./assets/fonts/CabinetGrotesk-Regular.otf",
+  variable: "--font-cabinet-grotesk",
   display: "swap",
-})
+});
 const bricolage = localFont({
-  src: '../app/assets/fonts/BricolageGrotesque.ttf',
-  variable:"--font-bricolage",
+  src: "./assets/fonts/BricolageGrotesque.ttf",
+  variable: "--font-bricolage",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cabinetGrotesk.variable}  ${bricolage.variable} antialiased bg-black `}
+        className={`${cabinetGrotesk.className} ${cabinetGrotesk.variable} ${bricolage.variable} antialiased bg-black`}
       >
         {children}
       </body>
