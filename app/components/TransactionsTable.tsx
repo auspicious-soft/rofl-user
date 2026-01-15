@@ -116,12 +116,12 @@ const TransactionsTable = () => {
           </div>
 
           {/* Table Body */}
-          <div className="w-full bg-black flex flex-col justify-start items-start">
+          <div className="w-full bg-[#272727] flex flex-col justify-start items-start">
             {transactions.map((transaction, index) => (
               <div
                 key={index}
                 className={`w-full h-12 px-5 ${
-                  index % 2 === 0 ? "bg-black" : "bg-[#272727]"
+                  index % 2 === 0 ? " bg-black" : " bg-[#272727]"
                 } ${
                   index === 0 ? "pt-1" : ""
                 } rounded-md border-b border-neutral-600/5 inline-flex justify-start items-center`}
