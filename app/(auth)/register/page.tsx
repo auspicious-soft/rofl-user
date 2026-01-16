@@ -33,7 +33,7 @@ export default function Register() {
         {/* Heading */}
         <div className="text-center">
           <h1 className="text-4xl font-extrabold [text-shadow:1px_1px_0px_rgb(0_0_0/1.00)] bricolage text-[#F2482D]">
-            Create Account
+            Create Seller Account
           </h1>
           <p className="mt-2 text-base font-normal text-white">
             Only U.S. residents can sell. Identity verification is required.
