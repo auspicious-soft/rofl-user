@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             FAQ’s
           </Link>
           <Link
-            href="/user/list-item"
+            href="https://rofl-admin.vercel.app/register"
             className="text-black text-base font-medium "
           >
             List Your Item
@@ -150,7 +150,7 @@ const Navbar: React.FC = () => {
             <Link href="/user/faqs" onClick={closeAll} className="py-2 text-sm font-medium">
               FAQ’s
             </Link>
-            <Link href="/user/list-item" onClick={closeAll} className="py-2 text-sm font-medium">
+            <Link href="https://rofl-admin.vercel.app/register" onClick={closeAll} className="py-2 text-sm font-medium">
               List Your Item
             </Link>
             <button
