@@ -17,14 +17,14 @@ export default function HowItWorksCard({ step, index }: CardProps) {
   const titleColor = isPrimary ? "text-white" : "text-[#F2482D]";
 
   return (
-    <div className="relative flex flex-col items-center w-full h-120">
+    <div className="relative max-w-345 flex flex-col items-center  h-68 lg:h-120 2xl:h-150">
       {/* DESCRIPTION */}
      {isTop ? (
-        <p className="mt-70 text-gray-400 text-sm leading-6 max-w-50 text-center ">
+        <p className="mt-50 lg:mt-70 2xl:mt-80 text-gray-400 text-sm leading-6 max-w-50 text-center ">
           {step.description}
         </p>
       ) : (
-        <p className="mt-36 text-gray-400 text-sm leading-6 max-w-50 text-center">
+        <p className="mt-5 lg:mt-36 2xl:mt-45 text-gray-400 text-sm leading-6 max-w-50 text-center">
           {step.description}
         </p>
       )}
@@ -32,7 +32,7 @@ export default function HowItWorksCard({ step, index }: CardProps) {
       {/* SHAPE — FULL WIDTH */}
       <div
         className={[
-          "absolute left-1/2 -translate-x-1/2 w-full h-60 flex items-center justify-center",
+          "absolute left-1/2 -translate-x-1/2 w-full h-45 lg:h-60 2xl:h-75 flex items-center justify-center",
           bg,
 
           isTop ? "top-0 rounded-t-full" : "bottom-0 rounded-b-full",
@@ -54,7 +54,7 @@ export default function HowItWorksCard({ step, index }: CardProps) {
         {/* TITLE */}
         <h3
           className={[
-            "text-xl font-bold text-center px-8 leading-tight relative z-10",
+            "text-xl font-bold text-center leading-tight relative z-10",
             titleColor,
             isTop ? "mb-4" : "mt-4",
           ].join(" ")}
@@ -66,7 +66,7 @@ export default function HowItWorksCard({ step, index }: CardProps) {
           {step.title}
         </h3>
         {/* ELLIPSE IMAGE */}
-        <div className={`absolute ${isTop ? " mb-36" : "mt-36"} inset-0 flex items-center justify-center z-0`}>
+        <div className={`absolute ${isTop ? "mb-25 lg:mb-36" : "mt-30 lg:mt-36"} inset-0 flex items-center justify-center z-0`}>
           <Image
             src="/images/elipse.png"
             alt="Ellipse"
