@@ -1,5 +1,7 @@
+"use client"
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface ProductCardProps {
   product: {
@@ -12,6 +14,7 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product }: ProductCardProps) {
+  const router = useRouter()
   return (
     <div className="bg-surface-dark rounded-2xl outline-black flex flex-col gap-5 pb-6 bg-black">
       {/* IMAGE */}
@@ -50,7 +53,7 @@ function ProductCard({ product }: ProductCardProps) {
             {product.tickets} Tickets
           </span>
 
-          <button className="h-10 px-9 py-4 bg-primary-red rounded-[10px] flex items-center gap-3">
+          <button onClick={()=>router.push("/user/product/32")} className="h-10 px-9 py-4 bg-primary-red rounded-[10px] flex items-center gap-3">
             <span className="text-white text-base font-medium">
               Enter
             </span>

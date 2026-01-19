@@ -115,19 +115,19 @@ const Navbar: React.FC = () => {
         {/* Dropdown Menu */}
         {open && (
           <div className="absolute top-full px-2 right-0 mt-2 max-w-100 rounded-xl bg-[#FFFFFF] border-none shadow-xl overflow-hidden z-50">
-            <button className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            <Link href={"/user/transaction&purchase"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
               <History />
               Transactions / Purchase
-            </button>
+            </Link>
 
-            <button className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            <Link href={"/user/profile/change-password"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
               <Lock />
               Change Password
-            </button>
-            <button className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            </Link>
+            <Link href={"/user/profile"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
               <User className="w-4 h-4" />
               My Profile
-            </button>
+            </Link>
 
             <button className="w-full px-4 py-3 border-t border-t-[#E2E2E2] outline-none  flex items-center gap-3 text-[#464646] text-sm">
               <LogOut className="w-4 h-4" />
