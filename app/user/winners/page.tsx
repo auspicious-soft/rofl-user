@@ -102,26 +102,56 @@ const Page = () => {
 
   return (
     <>
-      <BreadCrumb title="Recent Winners" badgeText="Experience Pure Excitement" />
+      <BreadCrumb
+        title="Recent Winners"
+        badgeText="Experience Pure Excitement"
+      />
 
       <section className="w-full px-4 sm:px-6 lg:px-10 py-10">
         {/* HEADER ROW */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-white hidden lg:block text-xl font-semibold">
-          </h2>
+          <h2 className="text-white hidden lg:block text-xl font-semibold"></h2>
 
           {/* DROPDOWN */}
-          <select
-            value={selectedPrize}
-            onChange={(e) => setSelectedPrize(e.target.value)}
-            className="bg-[#111] border border-[#2a2a2a] text-white text-sm px-4 py-2 rounded-lg outline-none cursor-pointer"
-          >
-            {prizeOptions.map((option) => (
-              <option key={option} value={option} className="text-black">
-                {option}
-              </option>
-            ))}
-          </select>
+          <div className="relative inline-block w-fit">
+            <select
+              value={selectedPrize}
+              onChange={(e) => setSelectedPrize(e.target.value)}
+              className="
+      appearance-none
+      bg-[#111]
+      border border-[#2a2a2a]
+      text-white text-sm
+      px-4 py-2 pr-10
+      rounded-lg
+      cursor-pointer
+      outline-1
+      focus:ring-1 focus:ring-[#F2482D]
+    "
+            >
+              {prizeOptions.map((option) => (
+                <option key={option} value={option} className="text-white">
+                  {option}
+                </option>
+              ))}
+            </select>
+
+            {/* Dropdown Icon */}
+            <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </span>
+          </div>
         </div>
 
         {/* GRID */}

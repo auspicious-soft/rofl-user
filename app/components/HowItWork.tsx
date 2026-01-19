@@ -38,9 +38,9 @@ const STEPS: Step[] = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative bg-black rounded-4xl py-10 px-5 overflow-hidden">
+    <section className="relative flex justify-center bg-black rounded-4xl py-10 overflow-hidden">
       {/* BACKGROUND BLOBS */}
-
+<div className="w-full max-w-[1400px] px-5">
       {/* HEADER */}
       <div className="flex flex-wrap justify-between items-start mb-20 relative z-10">
         <h2 className="text-5xl text-[#F2482D] bricolage font-extrabold leading-[73px] max-w-md">
@@ -56,7 +56,7 @@ export default function HowItWorksSection() {
       </div>
 
       {/* STEPS */}
-      <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center relative z-10">
+      <div className="hidden lg:grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 items-center relative z-10">
         {STEPS.map((step, index) => (
           <HowItWorksCard key={index} step={step} index={index} />
         ))}
@@ -65,6 +65,7 @@ export default function HowItWorksSection() {
         {STEPS.map((step, index) => (
           <HowItWorksCardMobile key={index} step={step} index={index} />
         ))}
+      </div>
       </div>
     </section>
   );

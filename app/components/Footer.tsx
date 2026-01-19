@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, X, Linkedin } from "lucide-react";
+import { FaceBook, Instagram, Printist, Twitter } from "../utils/icons";
 
 const Footer: React.FC = () => {
   return (
@@ -124,16 +124,16 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex justify-center md:justify-start items-center gap-4">
               <div className="w-7 h-7 p-2 bg-white rounded-2xl flex justify-center items-center hover:scale-110 transition-transform cursor-pointer">
-                <Facebook className="w-4 h-4 text-black" />
+                <FaceBook/>
               </div>
               <div className="w-7 h-7 p-2 bg-white rounded-2xl flex justify-center items-center hover:scale-110 transition-transform cursor-pointer">
-                <Instagram className="w-4 h-4 text-black" />
+                <Instagram />
               </div>
               <div className="w-7 h-7 p-2 bg-white rounded-2xl flex justify-center items-center hover:scale-110 transition-transform cursor-pointer">
-                <X className="w-4 h-4 text-black" />
+                <Twitter/>
               </div>
               <div className="w-7 h-7 p-2 bg-white rounded-2xl flex justify-center items-center hover:scale-110 transition-transform cursor-pointer">
-                <Linkedin className="w-4 h-4 text-black" />
+                <Printist/>
               </div>
             </div>
           </div>

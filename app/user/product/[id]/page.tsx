@@ -3,6 +3,7 @@
 import { FAQAccordion } from "@/app/components/FAQAccordion";
 import ProductCard from "@/app/components/ProductCard";
 import FeedbackSection from "@/app/components/Testimonial";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -120,11 +121,9 @@ const ProductDetailPage = () => {
               <button
                 key={i}
                 onClick={() => setActiveImage(img)}
-                className={`relative w-20 h-16 rounded-xl overflow-hidden border transition ${
-                  activeImage === img
-                    ? "border-[#F2482D]"
-                    : "border-white/10"
-                }`}
+                className={`relative w-20 h-16 rounded-xl overflow-hidden border-none transition 
+                `
+              }
               >
                 <Image src={img} alt="thumb" fill className="object-cover" />
               </button>
@@ -143,23 +142,23 @@ const ProductDetailPage = () => {
             17 Tickets
           </span>
 
-          <p className="text-lg font-medium text-gray-300 leading-6 max-w-xl">
+          <p className="text-base font-medium text-gray-300 leading-8 max-w-xl">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
           </p>
 
-          <div className="text-sm text-gray-400">
-            <span className="block text-xs text-gray-500">Available Entries</span>
+          <div className="text-sm text-white">
+            <span className="block text-xs text-white">Available Entries</span>
             20/500*
           </div>
 
           {/* QUANTITY */}
-          <div className="flex items-center gap-4">
-            <span className="text-xs text-gray-500">Quantity</span>
+          <div className="flex flex-col items-left gap-2">
+            <span className="text-xs text-white">Quantity</span>
 
-            <div className="flex items-center gap-4 px-4 py-2 border border-white/10 rounded-lg">
+            <div className="flex items-center justify-around  gap-4 w-34 px-4 py-2 border border-[#E6E6E6] rounded-lg">
               <button
                 onClick={() => setQty(Math.max(1, qty - 1))}
                 className="text-lg"
@@ -177,8 +176,8 @@ const ProductDetailPage = () => {
           </div>
 
           {/* CTA */}
-          <button className="mt-4 w-full max-w-sm py-3 bg-[#F2482D] rounded-lg text-white font-semibold flex items-center justify-center gap-2 hover:bg-[#e13f26] transition">
-            Enter to Win →
+          <button className="mt-4 w-full max-w-sm py-3 bg-[#F2482D] rounded-lg text-white flex items-center justify-center gap-2 tracking-wide hover:bg-[#e13f26]">
+            Enter To Win <ArrowRight size={20} />
           </button>
         </div>
       </div>

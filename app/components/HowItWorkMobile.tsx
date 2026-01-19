@@ -70,7 +70,8 @@ export default function HowItWorksCardMobile({ step, index }: CardProps) {
       </div>
 
       {/* DESCRIPTION */}
-      <p className="flex-1 text-gray-400 text-sm font-normal leading-4 max-w-50 text-center">
+
+      <p className="flex-1 text-gray-400 text-sm font-normal leading-5 px-2 max-w-50 text-center">
         {step.description}
       </p>
     </div>

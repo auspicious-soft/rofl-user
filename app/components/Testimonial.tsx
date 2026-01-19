@@ -67,7 +67,7 @@ export default function FeedbackSection() {
         {/* Card Wrapper */}
         <div className="relative flex-1 flex justify-center items-center">
           {/* Background */}
-          <div className="hidden sm:block absolute -inset-x-4 lg:-inset-x-4 2xl:inset-x-126 h-32 lg:h-48 bg-white/20 rounded-3xl z-0 top-1/2 -translate-y-1/2" />
+          <div className="hidden sm:block absolute -inset-x-4 lg:-inset-x-3 2xl:inset-x-126 h-32 lg:h-56 bg-white/20 rounded-3xl z-0 top-1/2 -translate-y-1/2" />
 
           {/* Testimonial Card */}
           <div className="relative z-10 max-w-6xl w-full p-5 sm:p-7 lg:p-9 bg-black rounded-[16px] lg:rounded-[20px] shadow-[0_4px_8px_0_rgba(43,41,62,0.10)] flex flex-col gap-5 lg:gap-7">
@@ -83,11 +83,11 @@ export default function FeedbackSection() {
                 height={48}
                 alt={testimonial.name}
               />
-              <div className="flex flex-col gap-0.5 lg:gap-1">
-                <span className="text-Stroke text-base lg:text-lg font-bold">
+              <div className="flex flex-col text-[#E6E6E6] gap-0.5 lg:gap-1">
+                <span className="text-Stroke text-base text-[#E6E6E6] lg:text-lg font-bold">
                   {testimonial.name}
                 </span>
-                <span className="text-Stroke text-xs lg:text-sm font-normal">
+                <span className="text-Stroke text-xs text-[#E6E6E6] lg:text-sm font-normal">
                   {testimonial.location}
                 </span>
               </div>

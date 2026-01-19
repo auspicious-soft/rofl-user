@@ -461,3 +461,108 @@ export function Lock() {
     </svg>
   );
 }
+export function FaceBook() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 5.33333V10.6667C14 12.5076 12.5076 14 10.6667 14H5.33333C3.49239 14 2 12.5076 2 10.6667V5.33333C2 3.49239 3.49239 2 5.33333 2H10.6667C12.5076 2 14 3.49239 14 5.33333Z"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M7.33325 14.0002C7.33325 12.0002 7.33325 10.0002 7.33325 8.00016C7.33325 6.54183 7.66659 5.3335 9.99992 5.3335"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 8.6665H7.33333H10"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+export function Instagram() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.99992 10.6668C9.47265 10.6668 10.6666 9.4729 10.6666 8.00016C10.6666 6.5274 9.47265 5.3335 7.99992 5.3335C6.52716 5.3335 5.33325 6.5274 5.33325 8.00016C5.33325 9.4729 6.52716 10.6668 7.99992 10.6668Z"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M2 10.6667V5.33333C2 3.49239 3.49239 2 5.33333 2H10.6667C12.5076 2 14 3.49239 14 5.33333V10.6667C14 12.5076 12.5076 14 10.6667 14H5.33333C3.49239 14 2 12.5076 2 10.6667Z"
+        stroke="black"
+      />
+      <path
+        d="M11.6667 4.33993L11.6734 4.33252"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}
+export function Twitter() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.2131 13.8456L2.50199 2.64557C2.29764 2.38283 2.48487 2 2.81773 2H4.47091C4.59434 2 4.71087 2.05699 4.78665 2.15443L13.4977 13.3544C13.7021 13.6172 13.5149 14 13.182 14H11.5289C11.4054 14 11.2889 13.943 11.2131 13.8456Z"
+        stroke="black"
+      />
+      <path d="M13.3334 2L2.66675 14" stroke="black" stroke-linecap="round" />
+    </svg>
+  );
+}
+export function Printist() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.33335 9.66683C3.33335 6.66683 6.3083 4.3335 8.33335 4.3335C10.3584 4.3335 12 5.43594 12 8.00016C12 10.0252 10.6667 11.3335 9.33335 11.3335C8.00001 11.3335 7.33335 10.0002 7.66668 8.00016"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8 6.6665L6 14.3332"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M7.99992 14.6668C11.6818 14.6668 14.6666 11.682 14.6666 8.00016C14.6666 4.31826 11.6818 1.3335 7.99992 1.3335C4.31802 1.3335 1.33325 4.31826 1.33325 8.00016C1.33325 11.682 4.31802 14.6668 7.99992 14.6668Z"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+}

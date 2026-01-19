@@ -78,7 +78,7 @@ export default function LatestWinnersTable() {
                 <tr
                   key={idx}
                   className={`h-11 lg:h-12 ${
-                    isEven ? "bg-zinc-900 rounded-md" : ""
+                    isEven ? "" : "bg-[#19191D] rounded-md"
                   }`}
                 >
                   <td className="w-24 sm:w-36 px-2 text-xs lg:text-sm font-medium text-Stroke rounded-l-md">
