@@ -41,7 +41,7 @@ export default function HowItWorksSection() {
       {/* BACKGROUND BLOBS */}
 
       {/* HEADER */}
-      <div className="flex justify-between items-start mb-20 relative z-10">
+      <div className="flex flex-wrap justify-between items-start mb-20 relative z-10">
         <h2 className="text-5xl text-[#F2482D] bricolage font-extrabold leading-[73px] max-w-md">
           How It Works
         </h2>
