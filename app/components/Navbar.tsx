@@ -153,7 +153,7 @@ const Navbar: React.FC = () => {
             <Link href="https://rofl-admin.vercel.app/register" onClick={closeAll} className="py-2 text-sm font-medium">
               List Your Item
             </Link>
-            <button
+            {/* <button
               onClick={() => {
                 setOpen(true);
                 setMobileOpen(false);
@@ -161,8 +161,8 @@ const Navbar: React.FC = () => {
               className="py-2 text-sm text-left font-medium"
             >
               Login / Account
-            </button>
-            <hr className="my-2" />
+            </button> */}
+            {/* <hr className="my-2" /> */}
             <Link href={"/user/transaction&purchase"} onClick={closeAll} className="py-2 text-sm text-left">
               Transactions / Purchase
             </Link>
