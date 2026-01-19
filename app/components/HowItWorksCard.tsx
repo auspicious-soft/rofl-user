@@ -19,12 +19,12 @@ export default function HowItWorksCard({ step, index }: CardProps) {
   return (
     <div className="relative flex flex-col items-center w-full h-120">
       {/* DESCRIPTION */}
-      {isTop ? (
-        <p className="mt-44 text-gray-400 text-sm leading-6 max-w-50 text-center px-4">
+     {isTop ? (
+        <p className="mt-70 text-gray-400 text-sm leading-6 max-w-50 text-center ">
           {step.description}
         </p>
       ) : (
-        <p className="mb-44 text-gray-400 text-sm leading-6 max-w-50 text-center px-4">
+        <p className="mt-36 text-gray-400 text-sm leading-6 max-w-50 text-center">
           {step.description}
         </p>
       )}
@@ -54,13 +54,13 @@ export default function HowItWorksCard({ step, index }: CardProps) {
         {/* TITLE */}
         <h3
           className={[
-            "text-3xl font-bold text-center leading-tight relative z-10",
+            "text-xl font-bold text-center px-8 leading-tight relative z-10",
             titleColor,
             isTop ? "mb-4" : "mt-4",
           ].join(" ")}
-          style={{
-            maxWidth: "160px",
-            lineHeight: "1.2",
+          style={{ 
+            maxWidth: '160px',
+            lineHeight: '1.2'
           }}
         >
           {step.title}
