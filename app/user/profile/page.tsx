@@ -151,7 +151,7 @@ const Input = ({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      className="w-full h-12 sm:h-14 px-5 sm:px-7 bg-[#272727] text-white placeholder:text-gray-500 outline-none"
+      className="w-full h-12 sm:h-14 px-5 rounded-[10px] bg-[#272727] text-white outline-none"
     />
   </div>
 );

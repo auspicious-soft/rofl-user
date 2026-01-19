@@ -36,7 +36,7 @@ const ChangePassword = () => {
             value={value}
             onChange={onChange}
             placeholder={placeholder}
-            className="self-stretch h-12 sm:h-14 w-full px-5 sm:px-7 pr-12 py-2.5 bg-[#272727] text-white outline-none focus:border-[#F2482D]"
+            className="self-stretch h-12 sm:h-14 w-full rounded-[10px] px-5 pr-12 py-2.5 bg-[#272727] text-white outline-none focus:border-[#F2482D]"
           />
 
           <button
@@ -57,7 +57,7 @@ const ChangePassword = () => {
         <div className="self-stretch flex flex-col items-center gap-7">
           {/* Header */}
           <div className="self-stretch flex flex-col items-center gap-2.5">
-            <div className="self-stretch text-center text-[#F2482D] text-3xl sm:text-4xl lg:text-5xl font-extrabold">
+            <div className="self-stretch text-center bricolage text-[#F2482D] text-3xl sm:text-4xl lg:text-5xl font-extrabold">
               Change Password
             </div>
             <div className="self-stretch text-center text-white text-sm sm:text-base lg:text-lg font-medium">
