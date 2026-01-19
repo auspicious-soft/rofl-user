@@ -81,19 +81,19 @@ export default function LatestWinnersTable() {
                     isEven ? "" : "bg-[#19191D] rounded-md"
                   }`}
                 >
-                  <td className="w-24 sm:w-36 px-2 text-xs lg:text-sm font-medium text-Stroke rounded-l-md">
+                  <td className="w-24 sm:w-36 text-white px-2 text-xs lg:text-sm font-medium text-Stroke rounded-l-md">
                     {winner.srNo}
                   </td>
 
-                  <td className="px-2 text-sm lg:text-base font-medium text-Stroke whitespace-nowrap">
+                  <td className="px-2 text-sm text-white lg:text-base font-medium text-Stroke whitespace-nowrap">
                     {winner.name}
                   </td>
 
-                  <td className="px-2 text-sm lg:text-base font-medium text-Stroke whitespace-nowrap">
+                  <td className="px-2 text-sm text-white lg:text-base font-medium text-Stroke whitespace-nowrap">
                     {winner.item}
                   </td>
 
-                  <td className="w-36 sm:w-56 px-2 text-sm lg:text-base font-medium text-Stroke rounded-r-md whitespace-nowrap">
+                  <td className="w-36 sm:w-56 text-white px-2 text-sm lg:text-base font-medium text-Stroke rounded-r-md whitespace-nowrap">
                     {winner.date}
                   </td>
                 </tr>
