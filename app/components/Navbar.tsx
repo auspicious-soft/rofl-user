@@ -8,7 +8,7 @@ import { Lock } from "../utils/icons";
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-   const closeAll = () => {
+  const closeAll = () => {
     setOpen(false);
     setMobileOpen(false);
   };
@@ -19,8 +19,7 @@ const Navbar: React.FC = () => {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen((s) => !s)}
-          className="md:hidden p-2 rounded-md bg-transparent"
-          aria-label="Toggle menu"
+          className="lg:hidden p-2 rounded-md bg-transparent"
         >
           <svg
             width="24"
@@ -54,7 +53,7 @@ const Navbar: React.FC = () => {
         </button>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden lg:flex items-center gap-7">
           <Link
             href="/user/marketplace"
             className="text-black text-base font-medium "
@@ -84,14 +83,14 @@ const Navbar: React.FC = () => {
 
       {/* Logo (center on md+, right on mobile) */}
       <div className="ml-auto md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-      <Link href={"/user/dashboard"}>
-        <Image
-          className="w-32 h-16 object-contain"
-          src="/images/leftLogo.png"
-          alt="Logo 2"
-          width={126}
-          height={70}
-        />
+        <Link href={"/user/dashboard"}>
+          <Image
+            className="w-32 h-16 object-contain"
+            src="/images/leftLogo.png"
+            alt="Logo 2"
+            width={126}
+            height={70}
+          />
         </Link>
       </div>
 
@@ -117,16 +116,25 @@ const Navbar: React.FC = () => {
         {/* Dropdown Menu */}
         {open && (
           <div className="absolute top-full px-2 right-0 mt-2 max-w-100 rounded-xl bg-[#FFFFFF] border-none shadow-xl overflow-hidden z-50">
-            <Link href={"/user/transaction&purchase"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            <Link
+              href={"/user/transaction&purchase"}
+              className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10"
+            >
               <History />
               Transactions / Purchase
             </Link>
 
-            <Link href={"/user/profile/change-password"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            <Link
+              href={"/user/profile/change-password"}
+              className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10"
+            >
               <Lock />
               Change Password
             </Link>
-            <Link href={"/user/profile"} className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10">
+            <Link
+              href={"/user/profile"}
+              className="w-full px-4 py-3 flex items-center gap-3 text-sm text-[#464646] hover:bg-white/10"
+            >
               <User className="w-4 h-4" />
               My Profile
             </Link>
@@ -141,18 +149,34 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu panel */}
       {mobileOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40">
           <div className="flex flex-col text-black px-4 py-4 gap-2">
-            <Link href="/user/marketplace" onClick={closeAll} className="py-2 text-sm font-medium">
+            <Link
+              href="/user/marketplace"
+              onClick={closeAll}
+              className="py-2 text-sm font-medium"
+            >
               Marketplace
             </Link>
-            <Link href="/user/winners" onClick={closeAll} className="py-2 text-sm font-medium">
+            <Link
+              href="/user/winners"
+              onClick={closeAll}
+              className="py-2 text-sm font-medium"
+            >
               Winners
             </Link>
-            <Link href="/user/faqs" onClick={closeAll} className="py-2 text-sm font-medium">
+            <Link
+              href="/user/faqs"
+              onClick={closeAll}
+              className="py-2 text-sm font-medium"
+            >
               FAQ’s
             </Link>
-            <Link href="https://rofl-admin.vercel.app/register" onClick={closeAll} className="py-2 text-sm font-medium">
+            <Link
+              href="https://rofl-admin.vercel.app/register"
+              onClick={closeAll}
+              className="py-2 text-sm font-medium"
+            >
               List Your Item
             </Link>
             {/* <button
@@ -165,11 +189,27 @@ const Navbar: React.FC = () => {
               Login / Account
             </button> */}
             {/* <hr className="my-2" /> */}
-            <Link href={"/user/transaction&purchase"} onClick={closeAll} className="py-2 text-sm text-left">
+            <Link
+              href={"/user/transaction&purchase"}
+              onClick={closeAll}
+              className="py-2 text-sm text-left"
+            >
               Transactions / Purchase
             </Link>
-            <Link href={"/user/profile/change-password"} onClick={closeAll} className="py-2 text-sm text-left">Change Password</Link>
-            <Link href={"/user/profile"} onClick={closeAll} className="py-2 text-sm text-left">My Profile</Link>
+            <Link
+              href={"/user/profile/change-password"}
+              onClick={closeAll}
+              className="py-2 text-sm text-left"
+            >
+              Change Password
+            </Link>
+            <Link
+              href={"/user/profile"}
+              onClick={closeAll}
+              className="py-2 text-sm text-left"
+            >
+              My Profile
+            </Link>
             <button className="py-2 text-sm text-left text-red-600">
               Logout
             </button>
