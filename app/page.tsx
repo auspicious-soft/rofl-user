@@ -4,7 +4,7 @@ import { ArrowRight, Lock, MailOpen } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import AuthLayout from "./components/AuthLayout";
-import { ClosedEye, Eye } from "./utils/icons";
+import { ClosedEye, Eye, Google } from "./utils/icons";
 import Image from "next/image";
 
 export default function Home() {
@@ -91,13 +91,7 @@ export default function Home() {
           type="button"
           className="w-full flex items-center justify-center gap-3 border-none rounded-xl py-3 text-sm font-medium text-white bg-[#272727] transition"
         >
-          <Image
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
-            alt="Google"
-            width={50}
-            height={50}
-            className="w-5 h-5"
-          />
+         <Google/>
           Continue with Google
         </button>
 

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import Image from "next/image";
 import AuthLayout from "@/app/components/AuthLayout";
-import { ClosedEye, Eye } from "@/app/utils/icons";
+import { ClosedEye, Eye, Google } from "@/app/utils/icons";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -114,13 +114,7 @@ export default function Register() {
           type="button"
           className="w-full flex items-center justify-center gap-3 border border-[#E6E6E6] rounded-xl py-3 text-sm font-medium text-white bg-[#272727] transition"
         >
-          <Image
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
-            alt="Google"
-            width={50}
-            height={50}
-            className="w-5 h-5"
-          />
+         <Google/>
           Continue with Google
         </button>
 
