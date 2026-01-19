@@ -67,7 +67,7 @@ export default function FeedbackSection() {
         {/* Card Wrapper */}
         <div className="relative flex-1 flex justify-center items-center">
           {/* Background */}
-          <div className="hidden sm:block absolute inset-x-6 lg:inset-x-16 h-32 lg:h-50 bg-white/10 rounded-3xl z-0 top-1/2 -translate-y-1/2" />
+          <div className="hidden sm:block absolute -inset-x-4 lg:-inset-x-6 2xl:inset-x-126 h-32 lg:h-48 bg-white/20 rounded-3xl z-0 top-1/2 -translate-y-1/2" />
 
           {/* Testimonial Card */}
           <div className="relative z-10 max-w-6xl w-full p-5 sm:p-7 lg:p-9 bg-black rounded-[16px] lg:rounded-[20px] shadow-[0_4px_8px_0_rgba(43,41,62,0.10)] flex flex-col gap-5 lg:gap-7">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HowItWorksCard from "./HowItWorksCard";
+import HowItWorksCardMobile from "./HowItWorkMobile";
 
 type StepVariant = "light" | "primary";
 
@@ -37,7 +38,7 @@ const STEPS: Step[] = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative bg-black rounded-4xl p-10 overflow-hidden">
+    <section className="relative bg-black rounded-4xl py-10 px-5 overflow-hidden">
       {/* BACKGROUND BLOBS */}
 
       {/* HEADER */}
@@ -55,9 +56,14 @@ export default function HowItWorksSection() {
       </div>
 
       {/* STEPS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center relative z-10">
+      <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center relative z-10">
         {STEPS.map((step, index) => (
           <HowItWorksCard key={index} step={step} index={index} />
+        ))}
+      </div>
+      <div className="grid lg:hidden grid-cols-1 md:grid-cols-2 items-center relative z-10">
+        {STEPS.map((step, index) => (
+          <HowItWorksCardMobile key={index} step={step} index={index} />
         ))}
       </div>
     </section>
