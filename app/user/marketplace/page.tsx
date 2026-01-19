@@ -55,9 +55,9 @@ const MarketPlace = () => {
   return (
     <>
       <BreadCrumb title="Marketplace" badgeText="Experience Pure Excitement" />
-      <section className="w-full p-10 rounded-4xl flex flex-col gap-7">
+      <section className="w-full px-5 py-10  lg:p-10 rounded-4xl flex flex-col gap-7">
         {/* HEADER */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center">
           <h2 className="text-[#F2482D] bricolage text-4xl font-extrabold ">
             Rofl Hosted
           </h2>
@@ -76,9 +76,9 @@ const MarketPlace = () => {
           ))}
         </div>
       </section>
-      <section className="w-full p-10 rounded-4xl flex flex-col gap-7">
+      <section className="w-full px-5 py-10  lg:p-10 rounded-4xl flex flex-col gap-7">
         {/* HEADER */}
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center">
           <h2 className="text-[#F2482D] bricolage text-4xl font-extrabold ">
             Premier
           </h2>
@@ -98,9 +98,9 @@ const MarketPlace = () => {
         </div>
       </section>
         {standardListing && (
-        <section className="w-full p-10 rounded-4xl flex flex-col gap-7">
+        <section className="w-full px-5 py-10  lg:p-10 rounded-4xl flex flex-col gap-7">
       {/* HEADER */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center">
         <h2 className="text-[#F2482D] bricolage text-4xl font-extrabold ">
          Standard Listing
         </h2>

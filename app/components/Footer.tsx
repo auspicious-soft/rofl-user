@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
           {/* Brand + Newsletter */}
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
+              <Link href={"/user/dashboard"}>
               <Image
                 className="w-36 h-20"
                 src="/images/leftLogo.png"
@@ -28,7 +29,7 @@ const Footer: React.FC = () => {
                 height={80}
                 unoptimized
               />
-
+</Link>
               <p className="text-white text-base leading-7">
                 Win amazing prizes with fair draws, secure payments, and trusted
                 raffles—all in one place.
