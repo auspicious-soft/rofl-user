@@ -27,7 +27,7 @@ export default function TransactionsTable() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-32 py-10">
       <div className="w-full overflow-x-auto">
-        <div className="min-w-[900px] bg-[#272727]">
+        <div className="min-w-[900px] bg-[#272727] rounded-lg">
 
           {/* HEADER */}
           <div className="grid grid-cols-5 bg-[#F2482D] h-12 rounded-md text-white font-medium">
