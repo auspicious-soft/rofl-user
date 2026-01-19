@@ -165,7 +165,7 @@ const Select = ({ label, value, onChange, options }: any) => (
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full h-12 sm:h-14 px-5 sm:px-7 bg-[#272727] text-white appearance-none cursor-pointer"
+        className="w-full h-12 sm:h-14 px-5 sm:px-7 rounded-[10px] bg-[#272727] text-white appearance-none cursor-pointer"
       >
         <option value="">Select {label}</option>
         {options.map((opt: string) => (
