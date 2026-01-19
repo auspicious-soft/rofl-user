@@ -84,6 +84,7 @@ const Navbar: React.FC = () => {
 
       {/* Logo (center on md+, right on mobile) */}
       <div className="ml-auto md:ml-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+      <Link href={"/user/dashboard"}>
         <Image
           className="w-32 h-16 object-contain"
           src="/images/leftLogo.png"
@@ -91,6 +92,7 @@ const Navbar: React.FC = () => {
           width={126}
           height={70}
         />
+        </Link>
       </div>
 
       {/* Right: login dropdown (hidden on mobile) */}
