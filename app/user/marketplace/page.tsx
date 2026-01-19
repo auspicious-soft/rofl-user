@@ -2,6 +2,7 @@
 import BreadCrumb from "@/app/components/BreadCrumb";
 import ProductCard from "@/app/components/ProductCard";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 interface Product {
   id: number;
@@ -52,6 +53,7 @@ const products: Product[] = [
 ];
 const MarketPlace = () => {
   const [standardListing, setStandardListing] = useState(false);
+  const router = useRouter()
   return (
     <>
       <BreadCrumb title="Marketplace" badgeText="Experience Pure Excitement" />
@@ -62,7 +64,9 @@ const MarketPlace = () => {
             Rofl Hosted
           </h2>
 
-          <button className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
+          <button
+          onClick={()=> router.push("/user/marketplace/detail")}
+           className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
             <span className="text-surface-light text-base font-medium">
               Show More
             </span>
@@ -83,7 +87,9 @@ const MarketPlace = () => {
             Premier
           </h2>
 
-          <button className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
+          <button
+          onClick={()=> router.push("/user/marketplace/detail")}
+           className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
             <span className="text-surface-light text-base font-medium">
               Show More
             </span>
@@ -105,7 +111,9 @@ const MarketPlace = () => {
          Standard Listing
         </h2>
 
-        <button className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
+        <button
+        onClick={()=> router.push("/user/marketplace/detail")}
+         className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
           <span className="text-surface-light text-base font-medium">
             Show More
           </span>

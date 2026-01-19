@@ -16,21 +16,21 @@ const TESTIMONIALS: Testimonial[] = [
       "I came in pretty skeptical, but the platform won me over quickly. Everything feels transparent, the interactions are smooth, and the overall energy is surprisingly positive. The instant digital rewards make every moment feel engaging, and the community aspect adds a layer of excitement I didn’t expect. It’s become a regular part of my day.",
     name: "Beck Alves",
     location: "Sydney, Australia",
-    avatar: "https://placehold.co/51x51",
+    avatar: "/images/Avatar.svg",
   },
   {
     message:
       "Absolutely love it! The interface is intuitive, and the experience keeps me coming back. The community vibe is unmatched, and every win feels rewarding.",
     name: "Jordan Smith",
     location: "New York, USA",
-    avatar: "https://placehold.co/51x51",
+    avatar: "/images/Avatar.svg",
   },
   {
     message:
       "A seamless platform with exciting rewards. The engagement is real, and the platform’s energy is contagious. Highly recommend giving it a try!",
     name: "Casey Miller",
     location: "London, UK",
-    avatar: "https://placehold.co/51x51",
+    avatar: "/images/Avatar.svg",
   },
 ];
 

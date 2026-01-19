@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   step: {
     title: string;
@@ -15,9 +17,7 @@ export default function HowItWorksCard({ step, index }: CardProps) {
   const titleColor = isPrimary ? "text-white" : "text-[#F2482D]";
 
   return (
-    <div className="relative flex flex-col items-center w-full h-80">
-    
-
+    <div className="relative flex flex-col items-center w-full h-120">
       {/* DESCRIPTION */}
       {isTop ? (
         <p className="mt-44 text-gray-400 text-sm leading-6 max-w-50 text-center px-4">
@@ -32,14 +32,12 @@ export default function HowItWorksCard({ step, index }: CardProps) {
       {/* SHAPE — FULL WIDTH */}
       <div
         className={[
-          "absolute left-1/2 -translate-x-1/2 w-full h-40 flex items-center justify-center",
+          "absolute left-1/2 -translate-x-1/2 w-full h-60 flex items-center justify-center",
           bg,
-          
+
           isTop ? "top-0 rounded-t-full" : "bottom-0 rounded-b-full",
         ].join(" ")}
       >
-       
-
         {/* NOTCH with shadow */}
         <div
           className={[
@@ -47,26 +45,36 @@ export default function HowItWorksCard({ step, index }: CardProps) {
             isTop ? "bottom-0 rounded-t-full" : "top-0 rounded-b-full",
           ].join(" ")}
           style={{
-            boxShadow: isTop 
-              ? '0 -8px 16px rgba(0, 0, 0, 0.3), inset 0 2px 8px rgba(0, 0, 0, 0.2)'
-              : '0 8px 16px rgba(0, 0, 0, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)'
+            boxShadow: isTop
+              ? "0 -8px 16px rgba(0, 0, 0, 0.3), inset 0 2px 8px rgba(0, 0, 0, 0.2)"
+              : "0 8px 16px rgba(0, 0, 0, 0.3), inset 0 -2px 8px rgba(0, 0, 0, 0.2)",
           }}
         />
 
         {/* TITLE */}
         <h3
           className={[
-            "text-xl font-bold text-center px-8 leading-tight relative z-10",
+            "text-3xl font-bold text-center leading-tight relative z-10",
             titleColor,
             isTop ? "mb-4" : "mt-4",
           ].join(" ")}
-          style={{ 
-            maxWidth: '160px',
-            lineHeight: '1.2'
+          style={{
+            maxWidth: "160px",
+            lineHeight: "1.2",
           }}
         >
           {step.title}
         </h3>
+        {/* ELLIPSE IMAGE */}
+        <div className={`absolute ${isTop ? " mb-36" : "mt-36"} inset-0 flex items-center justify-center z-0`}>
+          <Image
+            src="/images/elipse.png"
+            alt="Ellipse"
+            width={100}
+            height={100}
+            className={`${isTop ? " " : "rotate-180"} `}
+          />
+        </div>
       </div>
     </div>
   );

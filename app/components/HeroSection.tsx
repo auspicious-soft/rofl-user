@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface Slide {
@@ -103,12 +104,12 @@ function HeroContent() {
         </p>
       </div>
 
-      <button className="inline-flex items-center gap-3 px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 bg-[#F2482D] rounded-[10px] w-fit">
+      <Link href={"/user/marketplace"}  className="inline-flex items-center gap-3 px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 bg-[#F2482D] rounded-[10px] w-fit">
         <span className="text-white text-sm sm:text-base font-medium">
           Browse Items
         </span>
         <ArrowRight size={18} className="lg:w-5 lg:h-5" />
-      </button>
+      </Link>
     </div>
   );
 }
