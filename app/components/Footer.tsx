@@ -21,15 +21,15 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <Link href={"/user/dashboard"}>
-              <Image
-                className="w-36 h-20"
-                src="/images/leftLogo.png"
-                alt="Logo 1"
-                width={144}
-                height={80}
-                unoptimized
-              />
-</Link>
+                <Image
+                  className="w-36 h-20"
+                  src="/images/leftLogo.png"
+                  alt="Logo 1"
+                  width={144}
+                  height={80}
+                  unoptimized
+                />
+              </Link>
               <p className="text-white text-base leading-7">
                 Win amazing prizes with fair draws, secure payments, and trusted
                 raffles—all in one place.
@@ -41,16 +41,17 @@ const Footer: React.FC = () => {
                 Subscribe to our newsletter
               </span>
 
-              <div className="pl-5 pr-1 py-1 bg-black rounded-2xl outline outline-[#546A7C] flex items-center gap-2">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
-                />
-                <button className="px-4 py-2 bg-[#272727] rounded-[10px] text-white text-base hover:bg-gray-800 transition-colors">
-                  Submit
-                </button>
-              </div>
+              <div className="pl-5 pr-1 h-12 bg-black rounded-2xl outline outline-[#546A7C] flex items-center gap-2">
+  <input
+    type="email"
+    placeholder="Email"
+    className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
+  />
+  <button className="h-9 px-4 bg-[#272727] rounded-[10px] text-white text-sm hover:bg-gray-800 transition-colors">
+    Submit
+  </button>
+</div>
+
             </div>
           </div>
 
