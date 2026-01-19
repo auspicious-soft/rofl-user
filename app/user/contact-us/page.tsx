@@ -33,7 +33,7 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Enter your first name"
-                  className="w-full h-12 px-4 bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
+                  className="w-full h-12 px-4 rounded-[10px] bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
                 />
               </div>
 
@@ -44,7 +44,7 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Enter your last name"
-                  className="w-full h-12 px-4 bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
+                  className="w-full h-12 px-4 rounded-[10px] bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
                 />
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Page() {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full h-12 px-4 bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
+                  className="w-full h-12 px-4 rounded-[10px] bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
                 />
               </div>
 
@@ -69,7 +69,7 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Enter subject"
-                  className="w-full h-12 px-4 bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
+                  className="w-full h-12 px-4 rounded-[10px] bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D]"
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function Page() {
               <textarea
                 rows={5}
                 placeholder="Enter your message"
-                className="w-full px-4 py-3 bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D] resize-none"
+                className="w-full px-4 py-3 rounded-[10px] bg-[#1c1c1c] text-sm text-white placeholder-gray-500 outline-none border-none focus:border-[#F2482D] resize-none"
               />
             </div>
 
