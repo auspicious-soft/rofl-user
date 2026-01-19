@@ -21,7 +21,7 @@ export function FAQAccordion({ faqs }: { faqs: { question: string; answer: strin
               <span className={`text-xl font-bold ${isOpen ? "text-white" : "text-gray-200"}`}>
                 {faq.question}
               </span>
-              <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}><ChevronDown /></span>
+              <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}><ChevronDown color="white" /></span>
             </div>
 
             {isOpen && (

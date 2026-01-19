@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import ProductCard from "./ProductCard";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -58,12 +59,12 @@ export default function FeaturedProducts() {
           Featured Items
         </h2>
 
-        <button className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
+        <Link href={"/user/marketplace"} className="h-12 px-9 py-4 bg-[#F2482D] rounded-[10px] flex items-center gap-3">
           <span className="text-surface-light text-base font-medium">
             View All Items
           </span>
           <ArrowRight size={20} />
-        </button>
+        </Link>
       </div>
 
       {/* GRID */}

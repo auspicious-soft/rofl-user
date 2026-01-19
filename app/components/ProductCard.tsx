@@ -36,7 +36,7 @@ function ProductCard({ product }: ProductCardProps) {
       <div className="px-4 lg:px-6 flex flex-col gap-3 lg:gap-4">
         <div className="flex flex-col gap-1">
           <div className="flex justify-between items-start lg:items-center gap-2">
-            <h3 className="text-surface-light text-lg lg:text-xl font-bold">
+            <h3 className="text-surface-light text-white text-lg lg:text-xl font-bold">
               {product.title}
             </h3>
             <span className="text-black text-xs font-bold whitespace-nowrap">
@@ -44,7 +44,7 @@ function ProductCard({ product }: ProductCardProps) {
             </span>
           </div>
 
-          <p className="text-text-muted text-sm leading-5 lg:leading-6">
+          <p className=" text-white text-sm leading-5 lg:leading-6">
             {product.description}
           </p>
         </div>

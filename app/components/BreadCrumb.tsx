@@ -23,7 +23,7 @@ export default function BreadCrumb({ title, badgeText }: BreadCrumbProps) {
 
       <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-10">
         <div
-          className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-fill shadow-xl"
+          className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg p-6 sm:p-8 lg:p-10 rounded-4xl"
           style={{ backgroundImage: "url('/images/footer-bg.png')" }}
         >
           <HeroContent title={title} badgeText={badgeText} />
