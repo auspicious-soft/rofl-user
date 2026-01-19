@@ -130,51 +130,52 @@ const MarketPlaceDetail = () => {
           {/* MAIN CONTENT */}
           <main className="flex flex-col gap-6">
             {/* TOP FILTER BAR */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={() => setActiveListing("ROFL")}
-                  className={`px-4 py-2 text-sm rounded-[10px] transition
-      ${
-        activeListing === "ROFL"
-          ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
-          : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
-      }`}
-                >
-                  ROFL Hosted
-                </button>
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+  <div className="flex items-center gap-3 ">
+    <button
+      onClick={() => setActiveListing("ROFL")}
+      className={`h-10 px-6 py-4 flex items-center justify-center text-sm rounded-[10px] transition
+        ${
+          activeListing === "ROFL"
+            ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
+            : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
+        }`}
+    >
+      ROFL Hosted
+    </button>
 
-                <button
-                  onClick={() => setActiveListing("PREMIUM")}
-                  className={`px-4 py-2 text-sm rounded-[10px] transition
-      ${
-        activeListing === "PREMIUM"
-          ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
-          : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
-      }`}
-                >
-                  Premium
-                </button>
+    <button
+      onClick={() => setActiveListing("PREMIUM")}
+      className={`h-10 px-6 py-4 flex items-center justify-center text-sm rounded-[10px] transition
+        ${
+          activeListing === "PREMIUM"
+            ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
+            : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
+        }`}
+    >
+      Premier
+    </button>
 
-                <button
-                  onClick={() => setActiveListing("STANDARD")}
-                  className={`px-4 py-2 text-sm rounded-[10px] transition
-      ${
-        activeListing === "STANDARD"
-          ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
-          : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
-      }`}
-                >
-                  Standard Listing
-                </button>
-              </div>
+    <button
+      onClick={() => setActiveListing("STANDARD")}
+      className={`h-10 px-6 py-4 flex items-center justify-center text-sm rounded-[10px] transition
+        ${
+          activeListing === "STANDARD"
+            ? "bg-[#F2482D] text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1.00)]"
+            : "border border-gray-600 text-white shadow-[2px_2px_0px_0px_rgba(153,153,153,1.00)]"
+        }`}
+    >
+      Standard Listing
+    </button>
+  </div>
 
-              <select className="bg-none border-none cursor-pointer text-white text-sm rounded-lg px-3 py-2 outline-none">
-                <option className="text-black">Ending Soon</option>
-                <option className="text-black">Newest</option>
-                <option className="text-black">Price: Low to High</option>
-              </select>
-            </div>
+  <select className="bg-none border-none cursor-pointer text-white text-sm rounded-lg px-3 py-2 outline-none">
+    <option className="text-black">Ending Soon</option>
+    <option className="text-black">Newest</option>
+    <option className="text-black">Price: Low to High</option>
+  </select>
+</div>
+
 
             {/* PRODUCT GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

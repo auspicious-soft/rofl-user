@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, History, LogOut, User, User2 } from "lucide-react";
@@ -12,6 +12,36 @@ const Navbar: React.FC = () => {
     setOpen(false);
     setMobileOpen(false);
   };
+
+  // useEffect(() => {
+  //   const originalOverflow = document.body.style.overflow;
+  //   if (mobileOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = originalOverflow;
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = originalOverflow;
+  //   };
+  // }, [mobileOpen]);
+
+
+  useEffect(() => {
+  if (mobileOpen) {
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
+  } else {
+    document.body.style.overflow = "";
+    document.body.style.height = "";
+  }
+
+  return () => {
+    document.body.style.overflow = "";
+    document.body.style.height = "";
+  };
+}, [mobileOpen]);
+
+
   return (
     <div className="self-stretch px-4 sm:px-6 md:px-10 py-3 bg-white rounded-[10px] flex items-center m-4 md:m-8 relative">
       {/* Left: mobile menu button + desktop links */}
@@ -150,76 +180,75 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile menu panel */}
-      {mobileOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40">
-          <div className="flex flex-col text-black px-4 py-4 gap-2">
-            <Link
-              href="/user/marketplace"
-              onClick={closeAll}
-              className="py-2 text-sm font-medium"
-            >
-              Marketplace
-            </Link>
-            <Link
-              href="/user/winners"
-              onClick={closeAll}
-              className="py-2 text-sm font-medium"
-            >
-              Winners
-            </Link>
-            <Link
-              href="/user/faqs"
-              onClick={closeAll}
-              className="py-2 text-sm font-medium"
-            >
-              FAQ’s
-            </Link>
-            <a
-              href="https://rofl-seller.vercel.app/register"
-              onClick={closeAll}
-              target="_blank"
-            rel="noopener noreferrer"
-              className="py-2 text-sm font-medium"
-            >
-              List Your Item
-            </a>
-            {/* <button
-              onClick={() => {
-                setOpen(true);
-                setMobileOpen(false);
-              }}
-              className="py-2 text-sm text-left font-medium"
-            >
-              Login / Account
-            </button> */}
-            {/* <hr className="my-2" /> */}
-            <Link
-              href={"/user/transaction&purchase"}
-              onClick={closeAll}
-              className="py-2 text-sm text-left"
-            >
-              Transactions / Purchase
-            </Link>
-            <Link
-              href={"/user/profile/change-password"}
-              onClick={closeAll}
-              className="py-2 text-sm text-left"
-            >
-              Change Password
-            </Link>
-            <Link
-              href={"/user/profile"}
-              onClick={closeAll}
-              className="py-2 text-sm text-left"
-            >
-              My Profile
-            </Link>
-            <button className="py-2 text-sm text-left text-red-600">
-              Logout
-            </button>
-          </div>
-        </div>
-      )}
+   {mobileOpen && (
+   <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-40 w-full">
+
+    <div className="flex flex-col text-black px-4 py-4 gap-2">
+      <Link
+        href="/user/marketplace"
+        onClick={closeAll}
+        className="py-2 text-sm font-medium"
+      >
+        Marketplace
+      </Link>
+
+      <Link
+        href="/user/winners"
+        onClick={closeAll}
+        className="py-2 text-sm font-medium"
+      >
+        Winners
+      </Link>
+
+      <Link
+        href="/user/faqs"
+        onClick={closeAll}
+        className="py-2 text-sm font-medium"
+      >
+        FAQ’s
+      </Link>
+
+      <a
+        href="https://rofl-seller.vercel.app/register"
+        onClick={closeAll}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="py-2 text-sm font-medium"
+      >
+        List Your Item
+      </a>
+
+      <Link
+        href="/user/transaction&purchase"
+        onClick={closeAll}
+        className="py-2 text-sm"
+      >
+        Transactions / Purchase
+      </Link>
+
+      <Link
+        href="/user/profile/change-password"
+        onClick={closeAll}
+        className="py-2 text-sm"
+      >
+        Change Password
+      </Link>
+
+      <Link
+        href="/user/profile"
+        onClick={closeAll}
+        className="py-2 text-sm"
+      >
+        My Profile
+      </Link>
+
+      <button className="py-2 text-sm text-left text-red-600">
+        Logout
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
