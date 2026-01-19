@@ -23,7 +23,7 @@ export default function WinnerCard({
     <div className="w-full max-w-180 bg-black rounded-2xl flex flex-col lg:flex-row lg:items-center gap-4 p-4 lg:p-0">
       {/* LEFT IMAGE */}
       {image && (
-        <div className="relative flex-1 w-full h-48 lg:w-65  rounded-xl overflow-hidden shrink-0">
+        <div className="relative lg:flex-1 w-full h-48 lg:w-65  rounded-xl overflow-hidden shrink-0">
           <Image
             src={image}
             alt={prize || "Prize image"}
@@ -34,7 +34,7 @@ export default function WinnerCard({
       )}
 
       {/* RIGHT CONTENT */}
-      <div className="flex flex-1 flex-col justify-center gap-3 text-white  py-2">
+      <div className="flex lg:flex-1 flex-col justify-center gap-3 text-white  py-2">
         {/* USER */}
         {(avatar || name) && (
           <div className="flex items-center gap-3">
