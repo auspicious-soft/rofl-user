@@ -29,14 +29,24 @@ export default function HeroSection() {
   return (
     <section className="relative px-4 sm:px-6 lg:px-10 w-full overflow-hidden rounded-4xl">
       {/* MAIN IMAGE */}
-      <div className="relative min-h-[420px] sm:min-h-105 lg:min-h-130 rounded-4xl">
-        <Image
-          src={slides[activeIndex].image}
-          alt="Hero image"
-          fill
-          priority
-          className="object-cover rounded-4xl"
-        />
+      {/* MAIN IMAGE SLIDER */}
+      <div className="relative min-h-[420px] sm:min-h-105 lg:min-h-130 rounded-4xl overflow-hidden">
+        <div
+          className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {slides.map((slide) => (
+            <div key={slide.id} className="relative min-w-full h-full">
+              <Image
+                src={slide.image}
+                alt="Hero image"
+                fill
+                priority
+                className="object-cover rounded-4xl"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* OVERLAY CONTENT */}
@@ -87,7 +97,7 @@ function HeroContent() {
           Win Big. Pay Less.
         </h1>
 
-        <p className="text-Stroke text-sm sm:text-base lg:text-lg font-medium leading-6 sm:leading-7">
+        <p className="text-Stroke text-white text-sm sm:text-base lg:text-lg font-medium leading-6 sm:leading-7">
           Step into a world built around excitement, discovery, and moments that
           feel genuinely rewarding.
         </p>
