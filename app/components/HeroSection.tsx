@@ -27,9 +27,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative px-10 w-full overflow-hidden rounded-4xl ">
-      {/* MAIN FULL-WIDTH IMAGE */}
-      <div className="relative min-h-105 sm:min-h-130 rounded-4xl">
+    <section className="relative px-4 sm:px-6 lg:px-10 w-full overflow-hidden rounded-4xl">
+      {/* MAIN IMAGE */}
+      <div className="relative min-h-[420px] sm:min-h-105 lg:min-h-130 rounded-4xl">
         <Image
           src={slides[activeIndex].image}
           alt="Hero image"
@@ -37,22 +37,19 @@ export default function HeroSection() {
           priority
           className="object-cover rounded-4xl"
         />
-
-        {/* Soft overlays */}
-        <div className="absolute inset-0 " />
       </div>
 
-      {/* OVERLAY CONTENT PANEL */}
+      {/* OVERLAY CONTENT */}
       <div className="absolute inset-0 lg:left-10 flex items-center">
         <div
           className="
-            relative  
-            ml-6 sm:ml-12
-            max-w-lg
+            relative
+            mx-4 sm:ml-8 lg:ml-6
+            max-w-full sm:max-w-md lg:max-w-lg
             w-full
-            p-8 sm:p-10
-            rounded-3xl
-            bg-fill 
+            p-5 sm:p-8 lg:p-10
+            rounded-2xl lg:rounded-3xl
+            bg-fill
             shadow-xl
           "
           style={{ backgroundImage: "url('/images/footer-bg.png')" }}
@@ -62,12 +59,12 @@ export default function HeroSection() {
       </div>
 
       {/* DOT INDICATORS */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, index) => (
           <span
             key={index}
             className={`h-2 w-2 rounded-full transition-colors ${
-              index === activeIndex ? "bg-[#F2482D]" : "bg-[white]"
+              index === activeIndex ? "bg-[#F2482D]" : "bg-white"
             }`}
           />
         ))}
@@ -78,27 +75,29 @@ export default function HeroSection() {
 
 function HeroContent() {
   return (
-    <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-4">
-        <div className="inline-flex items-center px-4 py-2 bg-[#FFFFFF] rounded-[10px] w-fit">
-          <span className="text-[#F2482D] text-sm font-bold ">
+    <div className="flex flex-col gap-5 lg:gap-6">
+      <div className="flex flex-col gap-3 lg:gap-4">
+        <div className="inline-flex items-center px-3 py-1.5 lg:px-4 lg:py-2 bg-white rounded-[10px] w-fit">
+          <span className="text-[#F2482D] text-xs sm:text-sm font-bold">
             Experience Pure Excitement
           </span>
         </div>
 
-        <h1 className="text-[#F2482D] text-4xl sm:text-5xl bricolage font-extrabold leading-tight ">
+        <h1 className="text-[#F2482D] text-3xl sm:text-4xl lg:text-5xl bricolage font-extrabold leading-tight">
           Win Big. Pay Less.
         </h1>
 
-        <p className="text-Stroke text-base sm:text-lg font-medium leading-7 ">
+        <p className="text-Stroke text-sm sm:text-base lg:text-lg font-medium leading-6 sm:leading-7">
           Step into a world built around excitement, discovery, and moments that
           feel genuinely rewarding.
         </p>
       </div>
 
-      <button className="inline-flex items-center gap-3 px-8 py-3 bg-[#F2482D] rounded-[10px] w-fit">
-        <span className="text-White text-base font-medium ">Browse Items</span>
-        <ArrowRight size={20} />
+      <button className="inline-flex items-center gap-3 px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 bg-[#F2482D] rounded-[10px] w-fit">
+        <span className="text-white text-sm sm:text-base font-medium">
+          Browse Items
+        </span>
+        <ArrowRight size={18} className="lg:w-5 lg:h-5" />
       </button>
     </div>
   );
