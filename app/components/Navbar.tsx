@@ -69,12 +69,14 @@ const Navbar: React.FC = () => {
           <Link href="/user/faqs" className="text-black text-base font-medium ">
             FAQ’s
           </Link>
-          <Link
-            href="https://rofl-admin.vercel.app/register"
+          <a
+            href="https://rofl-seller.vercel.app/register"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-black text-base font-medium "
           >
             List Your Item
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -172,13 +174,15 @@ const Navbar: React.FC = () => {
             >
               FAQ’s
             </Link>
-            <Link
-              href="https://rofl-admin.vercel.app/register"
+            <a
+              href="https://rofl-seller.vercel.app/register"
               onClick={closeAll}
+              target="_blank"
+            rel="noopener noreferrer"
               className="py-2 text-sm font-medium"
             >
               List Your Item
-            </Link>
+            </a>
             {/* <button
               onClick={() => {
                 setOpen(true);
