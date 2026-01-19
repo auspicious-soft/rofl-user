@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         padding: "25px",
       }}
     >
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-10 lg:px-10 py-8 flex flex-col justify-start items-center gap-6">
+      <div className="w-full mx-auto px-2 md:px-5 lg:px-5 flex flex-col justify-start items-center gap-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-24 w-full">
           {/* Brand + Newsletter */}
           <div className="flex flex-col gap-4">
@@ -42,16 +42,15 @@ const Footer: React.FC = () => {
               </span>
 
               <div className="pl-5 pr-1 h-12 bg-black rounded-2xl outline outline-[#546A7C] flex items-center gap-2">
-  <input
-    type="email"
-    placeholder="Email"
-    className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
-  />
-  <button className="h-9 px-4 bg-[#272727] rounded-[10px] text-white text-sm hover:bg-gray-800 transition-colors">
-    Submit
-  </button>
-</div>
-
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="flex-1 bg-transparent text-zinc-400 text-xs outline-none placeholder:text-zinc-400"
+                />
+                <button className="h-9 px-4 bg-[#272727] rounded-[10px] text-white text-sm hover:bg-gray-800 transition-colors">
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
 
