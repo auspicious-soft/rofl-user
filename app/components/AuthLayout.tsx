@@ -9,7 +9,7 @@ export default function AuthLayout({
   logoClassName?: string;
 }) {
   return (
-    <div className="w-full bg-[#0f0f0f] flex font-sans h-screen">
+    <div className="w-full bg-[#272727] flex font-sans h-screen">
       <div className="w-1/2 hidden md:flex items-center justify-center overflow-hidden">
         <Image
           className="w-full h-full object-cover"
