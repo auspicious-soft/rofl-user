@@ -53,7 +53,7 @@ export default function FeaturedProducts() {
   return (
     <section className="w-full p-10 rounded-4xl flex flex-col gap-7">
       {/* HEADER */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center">
         <h2 className="text-[#F2482D] bricolage text-4xl font-extrabold ">
           Featured Items
         </h2>
