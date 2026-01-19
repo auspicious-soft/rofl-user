@@ -12,7 +12,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <AuthLayout logoClassName="mt-50">
+    <AuthLayout logoClassName="mt-35">
       <form className="space-y-5 border-none p-5 rounded-3xl bg-linear-to-b from-[#39207A] from-0% via-[#000000] via-15% to-[#000000] to-100%">
         {/* Heading */}
         <div className="text-center">
