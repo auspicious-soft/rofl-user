@@ -22,7 +22,7 @@ export default function AuthLayout({
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col bg-[#272727] relative items-center justify-center h-screen">
-        <p className="absolute bottom-1 md:top-10 right-15 md:right-5 text-[#ffffff] text-sm font-normal">
+        <p className="absolute bottom-1 md:top-10 right-20 md:right-5 text-[#ffffff] text-sm font-normal">
           Have Issues? <span className="underline">Contact Support</span>
         </p>
 
