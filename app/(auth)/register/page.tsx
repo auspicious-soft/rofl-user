@@ -28,7 +28,7 @@ export default function Register() {
 
   return (
     <>
-    <AuthLayout logoClassName="mt-30">
+    <AuthLayout logoClassName="">
       <form onSubmit={handleRegister} className="space-y-5 border-none p-5 rounded-3xl bg-linear-to-b from-[#39207A] from-0% via-[#000000] via-15% to-[#000000] to-100%">
         {/* Heading */}
         <div className="text-center">

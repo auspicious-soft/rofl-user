@@ -28,7 +28,7 @@ export default function CreatePassword() {
 
   return (
     <>
-      <AuthLayout logoClassName="mt-12">
+      <AuthLayout logoClassName="">
         <form
           onSubmit={handleSubmit}
           className="space-y-5 border-none p-5 rounded-3xl bg-linear-to-b from-[#39207A] from-0% via-[#000000] via-15% to-[#000000] to-100%"
